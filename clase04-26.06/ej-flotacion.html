@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Posicionamiento Flotante</title>
+		<style>
+			/* agrupación de selectores */
+			.red, .green, .blue, .yellow {
+				width: 120px;
+				height: 120px;
+				/* flotación */
+				float: left;
+				/* margen */
+				margin: 0 10px 50px 10px;
+			}
+
+			/* especificación de selectores  */
+			.red {
+				background-color: red;
+			}
+			.green {
+				background-color: green;
+			}
+			.blue {
+				background-color: blue;
+			}
+			.yellow {
+				background-color: yellow;
+			}
+			.footer {
+				background-color: rgb(222, 113, 236);
+				padding: 15px;
+				clear: both;
+			}
+			.container {
+				width: 600px;
+				border: solid 10px black;
+				margin: 100px auto;
+			}
+			.products-wrapper {
+				width: 1000px;
+				border: solid 5px red;
+				margin: 0 auto;
+				/* para que el contenedor contenga los productos que están flotados */
+				overflow: hidden;
+			}
+			.one-product {
+				width: 150px;
+				background-color: yellow;
+				float: left;
+				margin: 0 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Solucionado los "problemas" de el Posicionamiento Flotante</h1>
+		<h3>Si el problema se presenta entre elementos hermanos (aquellos que comparten el mismo elemento contenedor) tendremos que aplicar clear: both;. Ahora, si el problema se presenta entre hijos y elementos contenedor soluciono el problema con overflow: hidden; aplicado al elemento contenedor. </h3>
+
+		<div class="products-wrapper">
+			<div class="one-product">
+				<h2>Product #1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#">ver más</a>
+			</div>
+			<div class="one-product">
+				<h2>Product #2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#">ver más</a>
+			</div>
+			<div class="one-product">
+				<h2>Product #3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#">ver más</a>
+			</div>
+			<div class="one-product">
+				<h2>Product #4</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#">ver más</a>
+			</div>
+			<div class="one-product">
+				<h2>Product #5</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="#">ver más</a>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="red"></div>
+			<div class="green"></div>
+			<div class="blue"></div>
+			<div class="yellow"></div>
+
+			<div class="footer"><b>Si queremos que este contenedor esté debajo de la cajas flotadas, tenemos que aplicar <code>clear: both;</code></b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque quae ad vitae velit, earum laboriosam ipsa. Omnis, dignissimos laborum ab in eum tempora! Harum doloremque veritatis laboriosam beatae voluptatem.</div>
+		</div>
+	</body>
+</html>

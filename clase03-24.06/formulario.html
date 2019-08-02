@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario de registro</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body class="body-register">
+		<h2>Registrate en nuestra web</h2>
+		<form method="post">
+
+			<div>
+				<!-- <label>Aquí va tu nombre completo:</label> <br> -->
+				<input type="text" name="fullName" placeholder="Nombre completo:">
+			</div>
+			<br>
+
+			<div>
+				<label>Cual es tu correo electrónico:</label> <br>
+				<input type="email" name="userEmail" placeholder="user@email.com">
+			</div>
+			<br>
+
+			<div>
+				<label>Escribí tu contraseña:</label> <br>
+				<input type="password" name="userPassword">
+			</div>
+			<br>
+
+			<div>
+				<label>Cual es tu estado civil:</label> <br>
+				<label><input type="radio" name="maritalStatus" value="casada"> Casada/o</label>
+				<label><input type="radio" name="maritalStatus" value="soltera"> Soltera/o</label>
+				<label><input type="radio" name="maritalStatus" value="divorciada"> Divorciada/o</label>
+				<label><input type="radio" name="maritalStatus" value="viuda"> Viuda/o</label>
+			</div>
+			<br>
+
+			<div>
+				<label>Dejanos saber tus pasatiempos:</label> <br>
+				<label><input type="checkbox" name="hobbies" value="leer"> Leer</label>
+				<label><input type="checkbox" name="hobbies" value="programar"> Programar</label>
+				<label><input type="checkbox" name="hobbies" value="netflix"> Netflix</label>
+				<label><input type="checkbox" name="hobbies" value="deportes"> Deportes</label>
+			</div>
+			<br>
+
+			<div>
+				<label>Donde vivís:</label>
+				<select name="country">
+					<option value="arg">Argentina</option>
+					<option value="bol">Bolivia</option>
+					<option value="bra">Brasil</option>
+					<option value="chi">Chile</option>
+					<option value="col">Colombia</option>
+					<option value="ecu">Ecuador</option>
+					<option value="par">Paraguay</option>
+					<option value="per">Perú</option>
+					<option value="uru">Uruguay</option>
+					<option value="ven">Venezuela</option>
+				</select>
+			</div>
+			<br>
+
+			<div>
+				<label>Escribí brevemente tu perfil:</label> <br>
+				<textarea name="profileDescription" class="area-texto"></textarea>
+			</div>
+			<br>
+
+			<div>
+				<label>Adjuntá tu CV:</label>
+				<input type="file" name="curriculum">
+			</div>
+			<br>
+
+			<button type="submit">Registrarse</button>
+		</form>
+	</body>
+</html>

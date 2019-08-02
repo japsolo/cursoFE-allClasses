@@ -1,0 +1,31 @@
+=== Asincronismo ===
+Nos permite ejecutar código que NO necesariamente tiene que esperar a estar completo para seguir ejecutando nuestro script.
+
+Un ejemplo muy fácil de entender song los timers nativos de JS.
+
+Nos sirve para hacer pedidos a lugares donde existe información y hacer algo con esa información.
+
+=== API ===
+API: Application Programming Interface (Interfaz de Programación de Aplicaciones).
+
+Es un lugar en donde alguien (un sistema) comparte información con nosotros.
+
+Las API's son un método transaccional de compartir información. Dicha información es compartida en un formato especial llamado JSON (Javascript Object Notation - Un string muy largo con muchas cosas).
+
+En Javascript tenemos un objeto que se llama JSON que nos da 2 métodos:
+
+	1. parse()
+		 Toma un dato que venga en formato JSON y lo convierte a un objeto literal.
+
+	2. stringify()
+		 Toma un objeto literal y lo convierte a un formato JSON.
+
+
+=== AJAX ===
+Es Asyncronous Javascript And XML. En la versión 6 de Javascript viene una función que se llama fetch().
+
+Fetch recibe como primer parámetro la URL del endpoint. Después de pasar el primer parámetro. Tenemos que ejecutar un método que se llama then().
+
+El método then() recibe como parámetro una función. Adentro de esa función vamos a recibir la respuesta del llamado asíncrono y la vamos a retornar en formato objeto literal. Para ello usamos el método json().
+
+Después, vamos a implementar otro método then(), en el cual vamos a recibir la respuesta y vamos a hacer algo con ella. Éste método también ejecuta una función.

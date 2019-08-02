@@ -1,0 +1,16 @@
+== Validación de Formularios ==
+Validar no es otra cosa más que poner un set de reglas para la data que esperamos nos llegue del formulario.
+
+Lo 1ero para comenzar a validar nuestros campos será capturar los mismos con JS.
+
+Para ello vamos a capturar en 1era medida al formulario para luego pedir los campos que hay en él.
+
+Una vez capturado el formulario, le podemos pedir TODOS sus campos. Para ello usamos la proipiedad .elements, la cual nos retorna una colección (Array) con todos los campos que tiene el formulario (input, select, button, etc).
+
+Para capturar el valor (lo que tiene adentro) de un campo lo hacemos de la siguiente manera:
+
+campo.value;
+
+Neesitamos definir en qué momento le asignamos la función que valida si el campo está vacío.
+
+Los campos de un formulario también tienen distintos tipos de eventos. Uno de ellos es el blur. Blur es un evento que se va a ejecutar cuando después de haber estado dentro de un campo, salgamos de él.

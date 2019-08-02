@@ -1,0 +1,55 @@
+=== D.O.M. ===
+Document Object Model. Es la forma en que JS interpreta un documento HTML. Es importante entender al DOM pues esto nos va a permitir implementar "interactividad" entre el usuario y el documento.
+
+A través del DOM podemos comenzar a capturar los diferentes objetos que tiene el DOM dentro.
+
+JS nos da 3 tipos de selectores (métodos) para capturar los elementos del DOM. Estos selectores son:
+
+1. document.querySelector();
+Le pasamos como parámetro un string. Ese string será el nombre de la etiqueta o selectro CSS que quiera tomar.
+
+2. document.querySelectorAll();
+Exactamente igual que el anterior, pero ahora nos entrega TODOS los elementos del DOM que coincidan con esa ocurrencia.
+
+3. document.getElementById();
+Exactamente igual que el querySelector, pero ahora le pasamos el valor del atributo id del elemento del html que queremos capturar. Si hay muchos elementos en el html con el mismo id, nos entrega la primer ocurrencia.
+
+
+== Objeto .style ==
+
+Javascript nos da un objeto que se llama .style a través de cual podemos comenzar a cambiar las propiedades de css de un elemento del DOM. Ej:
+
+var unParrafo = document.querySelector('p');
+
+unParrafo.style.color = 'red';
+
+
+== Manipulando el contenido de un elemento del DOM ==
+
+Para manipular el contenido JS nos da dos propiedades que nos permiten modificar el contenido interno de un elemento del DOM.
+
+Estos dos son de escritura y de lectura.
+
+1. innerText
+2. innerHTML
+
+
+** Ejercicio 1 **
+1. Pedir el nombre al visitante de la página
+2. Mostrar en el HTML dentro de un <h1>. Hola ____ bienvenid@.
+
+
+
+** Ejercicio Integrador **
+
+Usando el documento html del archivo basicDOM.zip:
+
+1. Con document.getElementById(), ocultar el elemento <h1 id="titular"> recién se cargue la página.
+2. Con querySelector(), capturar y hacer que la imagen de la lechuza, se convierta en blanco y negro, podemos utilizar: elemento.style.filter = "grayscale(100%)";
+3. Utilizando elemento.style, cambiarle el color a rojo a todos los párrafos <p>.
+4. Capturar los enlaces de la navbar y cambiar los textos de los mismos al castellano así:
+
+	- Top -> Inicio
+	- Work -> Qué hacemos
+	- Portfolio -> Nuestro portafolio
+	- Contact -> Escribimos

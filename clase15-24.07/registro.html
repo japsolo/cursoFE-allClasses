@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Register</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<!-- Register-Form -->
+		<div class="container" style="margin-top:30px; margin-bottom: 30px;">
+			<div class="row justify-content-center">
+				<div class="col-md-10">
+					<h2>Formulario de registro</h2>
+
+					<form method="post" enctype="multipart/form-data">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>Nombre completo:</b></label>
+									<input type="text" name="name" class="form-control">
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>Correo electrónico:</b></label>
+									<input type="text" name="email" class="form-control">
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>Password:</b></label>
+									<input type="password" name="password" class="form-control">
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>Repetir Password:</b></label>
+									<input type="password" name="rePassword" class="form-control">
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>País de nacimiento:</b></label>
+									<select name="country" class="form-control">
+										<option value="">Elegí un país</option>
+										<option value="Argentina">Argentina</option>
+										<option value="Brasil">Brasil</option>
+										<option value="Colombia">Colombia</option>
+										<option value="Perú">Perú</option>
+										<option value="Uruguay">Uruguay</option>
+									</select>
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label><b>Imagen de perfil:</b></label>
+									<div class="custom-file">
+										<input type="file" name="avatar" class="custom-file-input">
+										<label class="custom-file-label">Choose file...</label>
+									</div>
+								</div>
+								<div class="alert alert-danger hidden">
+									Mensaje de error
+								</div>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-primary">Registrarse</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- //Register-Form -->
+
+		<script src="js/app.js"></script>
+	</body>
+</html>

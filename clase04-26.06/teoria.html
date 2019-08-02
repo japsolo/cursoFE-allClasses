@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Modelo de caja - box model</title>
+		<style>
+			body {
+				background-image: url('images/bg-2.png');
+				background-repeat: repeat;
+				background-position: center center;
+				background-attachment: fixed;
+			}
+			.ej1 {
+				background: rgb(156, 238, 184);
+				color: #f45f5f;
+				padding: 30px;
+			}
+			.ej2 {
+				background: rgb(238, 169, 156);
+				color: #fff;
+				width: 300px;
+				padding: 15px;
+				border: solid 20px black;
+				/* Tamaño real en width: 20 + 15 + 300 + 15 + 20 */
+			}
+
+			.ej3 {
+				background: rgb(176, 60, 223);
+				color: #fff;
+				width: 300px;
+				padding: 15px;
+				border: solid 20px black;
+				margin: 100px auto;
+				/* Tamaño real en width: 20 + 15 + 300 + 15 + 20 */
+			}
+
+			.ej4 {
+				background-color: rgb(184, 215, 59);
+				border: solid 10px red;
+				width: 300px;
+				padding: 15px;
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Modelo de caja</h1>
+		<p>Es la manera en que se comportan los elementos de html. Todos las etiquetas de html tienen un comportamiento default:</p>
+		<ul>
+			<li>elemento de bloque</li>
+			<li>elemento de línea</li>
+		</ul>
+
+		<p>El <b>box-model</b> busca implementar propiedades para manipular:</p>
+
+		<ol>
+			<li>Tamaño (ancho y alto)</li>
+			<li>Relleno</li>
+			<li>Borde</li>
+			<li>Márgen</li>
+		</ol>
+
+		<h2>Elementos de bloque</h2>
+		<p>Son aquellos que ocupan todo el espacio del que disponen a lo ancho. Un elemento de bloque, recibe facilmente todas las propiedades del <b>box-model</b>. Elementos de bloque más comunes:</p>
+		<ul>
+			<li>h1, h2... h6</li>
+			<li>p</li>
+			<li>div</li>
+			<li>ul, ol, li</li>
+			<li>nav, header</li>
+		</ul>
+
+		<p><b>Ejemplo:</b></p>
+
+		<p>Soy un párrafo</p>
+		<p>Soy un párrafo</p>
+
+		<h2>Elementos de línea</h2>
+		<p>Son aquellos que ocupan solamente la extensión de su contenido a lo ancho. Un elemento de línea, no recibe muy bien las propiedas del <b>box-model</b>. Elementos de línea más comunes:</p>
+		<ul>
+			<li>a</li>
+			<li>span</li>
+			<li>b, strong</li>
+			<li>i, em</li>
+		</ul>
+
+		<p>Ejemplo:</p>
+		<a href="#">Soy un enlace</a>
+		<a href="#">Soy un enlace</a>
+
+		<h2>Elementos de semi-bloque</h2>
+		<p>Son aquellos que ocupan solamente la extensión de su contenido a lo ancho. Un elemento de semi-bloque, SI recibe muy bien las propiedas del <b>box-model</b>. Elementos de línea más comunes:</p>
+		<ul>
+			<li>img</li>
+			<li>input</li>
+			<li>textarea</li>
+			<li>button</li>
+		</ul>
+
+		<p>Ejemplo:</p>
+
+		<button type="submit">Enviar</button>
+		<button type="submit">Enviar</button>
+
+		<hr>
+
+		<h2>Propiedades del box-model</h2>
+
+		<h3>width (ancho)</h3>
+		<p>La propiedad <b>width</b>, nos permite aplicar tamaño a lo ancho a un elemento que tome esta propiedad. El valor que definamos para el <b>width</b>, puede estar expresado en: pixeles (px) ó porcentaje (%). Ejemplo:</p>
+
+		<code>
+			width: 300px;
+		</code>
+
+		ó
+
+		<code>
+			width: 45%;
+		</code>
+
+		<h3>height (alto)</h3>
+		<p>La propiedad <b>height</b>, nos permite aplicar tamaño a lo alto a un elemento que tome esta propiedad. El valor que definamos para el <b>height</b>, puede estar expresado en: pixeles (px) ó porcentaje (%). Sin embargo siempre va a convenir aplicar un tamaño en px. Ó quizás convenga NO aplicar directamente esta propiedad. Ejemplo:</p>
+
+		<code>
+			height: 120px;
+		</code>
+
+		<h3>padding (relleno)</h3>
+		<p>El relleno es un espacio de reserva que va desde los bordes del elemento hacía adentro. Ejemplo:</p>
+
+		<div class="ej1">
+			soy un div con contenido. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cum impedit deserunt facilis quisquam quo nulla maiores. Consectetur explicabo, repellat doloribus qui aliquid commodi tempore odio. Beatae itaque quae obcaecati!
+		</div>
+
+		<p>La propiedad <b>padding</b> puede recibir 1, 2, 3 ó 4 valores, expresados en pixeles.</p>
+
+		<p><b>padding con 1 valor:</b></p>
+
+		<code>
+			padding: 30px; <br>
+			/* se aplica por igual a los 4 costados (top, right, bottom, left)*/
+		</code>
+
+		<p><b>padding con 2 valores:</b></p>
+
+		<code>
+			padding: 10px 5px; <br>
+			/* 1er valor (top y bottom) 2do valor (right y left) */
+		</code>
+
+		<p><b>padding con 3 valores:</b></p>
+
+		<code>
+			padding: 40px 25px 10px; <br>
+			/* 1er valor (top) 2do valor (right y left) 3er valor (bottom) */
+		</code>
+
+		<p><b>padding con 4 valores:</b></p>
+
+		<code>
+			padding: 40px 25px 10px 0; <br>
+			/* 1er valor (top) 2do valor (right) 3er valor (bottom) 4to valor (left) */
+		</code>
+
+		<h3>border (borde)</h3>
+		<p>La propiedad <b>border</b>, permite aplicar una línea decorativa a un elemento. Ejemplo:</p>
+
+		<div class="ej2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<p>La propiedad <b>border</b> recibe 3 valores en cualquier orden separados por un espacio: grosor del borde, tipo de línea para el borde y color del borde. Ejemplo:</p>
+
+		<code>
+			border: solid 5px red; <br>
+			/* en el tipo de línea para el borde, puedo implemetar cualquier de estos valores: solid ó dotted ó dashed ó double. */
+		</code>
+
+		<h4>margin (márgen)</h4>
+		<p>La propiedad <b>margin</b> define un distanciamiento entre elementos de html. Ejemplo:</p>
+
+		<div class="ej3">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<p>La propiedad <b>margin</b> recibe valores expresados en px o %, si aplicamos el valor <i>auto</i> el elemento quedará centrado de manera horizontal si y solo si es un elemento de bloque. El <b>margin</b> funciona muy parecido al padding, pues recibe 1, 2, 3 y hasta 4 valores.</p>
+
+		<code>
+			margin: 100px auto;
+		</code>
+
+		<hr>
+
+		<h2>Cambiando la naturaleza de un elemento</h2>
+		<p>Cuando querramos cambiar el comportamiento por default de un elemento (de línea a bloque) podemos usar la propiedas <b>display</b>. Dentro de los valores que más nos interesan son:</p>
+
+		<ul>
+			<li>block</li>
+			<li>inline</li>
+			<li>inline-block</li>
+			<li>none</li>
+		</ul>
+
+		<p>Ejemplos:</p>
+
+		<code>
+			display: block; <br>
+			/* lo convierte al elemento en un elemento de bloque */
+			<br><br>
+
+			display: inline; <br>
+			/* lo convierte al elemento en un elemento de línea */
+			<br><br>
+
+			display: inline-block; <br>
+			/* lo convierte al elemento en un elemento de semi-bloque */
+			<br><br>
+
+			display: none; <br>
+			/* Oculta al elemento */
+			<br><br>
+		</code>
+
+		<span class="ej4">
+			Soy un span con contenido. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi, totam. Molestiae ex similique alias, cumque hic dolore totam cupiditate consectetur autem rem officia est suscipit, sit. Obcaecati, dolore repudiandae.
+		</span>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>

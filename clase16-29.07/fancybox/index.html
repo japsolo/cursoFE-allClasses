@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Galería de Imágenes</title>
+		<link rel='stylesheet' href='css/fancybox.min.css'>
+	</head>
+	<body>
+
+		<a data-fancybox='gallery' href='images/photo_01.jpeg'>
+			<img src='images/photo_01.jpeg' width='200'>
+		</a>
+		<a data-fancybox='gallery' href='images/photo_02.jpeg'>
+			<img src='images/photo_02.jpeg' width='200'>
+		</a>
+		<a data-fancybox='gallery' href='images/photo_03.jpeg'>
+			<img src='images/photo_03.jpeg' width='200'>
+		</a>
+
+		<hr>
+
+		<a data-fancybox href="https://youtu.be/RqQ1d1qEWlE">YouTube video</a>
+
+		<a data-fancybox href="https://vimeo.com/191947042?color=f00">
+		  Vimeo video - custom color
+		</a>
+
+
+		<!-- jQuery -->
+		<script src='js/jquery-3.4.1.min.js'></script>
+		<!-- Fancybox -->
+		<script src='js/jquery.fancybox.min.js'></script>
+		<!-- Custom Gallery -->
+		<script>
+			/* global $ */
+			$('[data-fancybox]').fancybox({
+				arrows: false,
+				buttons: [
+					'share',
+					'slideShow',
+					'close'
+				]
+			});
+		</script>
+	</body>
+</html>

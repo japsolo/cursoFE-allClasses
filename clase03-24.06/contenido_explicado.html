@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios en HTML</title>
+</head>
+<body>
+	<h2>La etiqueta DIV</h2>
+	<p><strong>div</strong> significa: <em>división</em>. La etiqueta <strong>div</strong>, nos sirve como un <em>contenedor</em>. La etiqueta <strong>div</strong> es un elemento de bloque. Ejemplo:</p>
+
+	<div>
+		<ul>
+			<li>Elemento de lista dentro de la etiqueta <strong>div</strong></li>
+			<li>Elemento de lista dentro de la etiqueta <strong>div</strong></li>
+			<li>Elemento de lista dentro de la etiqueta <strong>div</strong></li>
+		</ul>
+	</div>
+
+	<h2>La etiqueta span</h2>
+	<p>Es un contenedor, pero a diferencia del div, es un elemento de <strong>línea</strong>. Solamente va a ocupar a lo ancho la longitud de su contenido. Ej:</p>
+
+	<span>Un texto cualquiera</span>
+	<span>Un texto cualquiera</span>
+
+	<h2>Formularios en HTML</h2>
+	<p>Los formularios en HTML nos sirven para captar información. Escenarios de uso más comunes:</p>
+	<ul>
+		<li>Contacto</li>
+		<li>Buscador</li>
+		<li>Login</li>
+		<li>Registro</li>
+	</ul>
+
+	<h3>Etiqueta &lt;form&gt;</h3>
+	<p>Le da funcionalidad al formulario. Hace que el mismo funcione. Tiene como mínimo 2 atributos que son obligatorios:</p>
+
+	<ul>
+		<li>
+			<strong>method=""</strong> <br>
+			Este atributo permite setear como se maneja la información del formulario. Sólo existen dos métodos: <em>get</em> y <em>post</em>.
+		</li>
+		<li>
+			<strong>action=""</strong> <br>
+			Este artributo nos permite setear una ruta en la cual se va a procesar la información del formulario. Generalmente en el action, se define una ruta que trabaja la información desde el backend.
+		</li>
+	</ul>
+
+	<h3>Etiqueta &lt;input&gt;</h3>
+	<p>Sirve para generar varios campos de información (es multifunción). La etiqueta <strong>input</strong>, necesita de 2 atributos obligatorios:</p>
+
+	<ul>
+		<li>
+			<strong>type=""</strong> <br>
+			Define que tipo de campo queremos crear. Existen varios valores posibles, ellos son:
+			<ul>
+				<li><em>text</em>: define un campo de inserción de texto.</li>
+				<li><em>password</em>: define un campo de tipo contraseña.</li>
+				<li><em>radio</em>: define un campo de tipo radio-button o también llamado botón de opción.</li>
+				<li><em>checkbox</em>: define un campo de tipo selección o también llamado botón de checkbox.</li>
+				<li><em>file</em>: define un campo para subir archivos.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>name=""</strong> <br>
+			Define un nombre para ese campo.
+		</li>
+	</ul>
+
+	<h3>Etiqueta &lt;label&gt;</h3>
+	<p>Nos permite generar un texto que viene a servir cómo RÓTULO del campo del formulario.</p>
+
+	<h4>Etiqueta &lt;textarea&gt;</h4>
+	<p>Esta etiqueta sirve para generar un campos de múltiples líneas de texto.</p>
+
+	<h4>Etiqueta &lt;select&gt;</h4>
+	<p>Genera una lista desplegable. Por defecto viene vacía, para definir las opciones necesitamos usar otra etiqueta. También se llama <em>combobox</em>.</p>
+
+	<h4>Etiqueta &lt;option&gt;</h4>
+	<p>Define una opción adentro de una lista desplegable. Es importante que siempre esté dentro de la etiqueta &lt;select&gt;.</p>
+
+	<h4>Etiqueta &lt;button&gt;</h4>
+	<p>Sirve para generar un botón que nos permita enviar la información de nuestro formulario.</p>
+
+	<h4>Formulario de ejemplo - Registración</h4>
+
+	<form action="" method="post">
+		<label>Nombre:</label>
+		<input type="text" name="nombre">
+		<br><br>
+
+		<label>Apellido:</label>
+		<input type="text" name="apellido">
+		<br><br>
+
+		<label>Contraseña:</label>
+		<input type="password" name="contrasena">
+
+		<h4>Generó:</h4>
+		
+		<label>
+			<input type="radio" name="genero" value="F">
+			<em>Femenino</em>
+		</label>
+		<br>
+
+		<label>
+			<input type="radio" name="genero" value="M">
+			<em>Masculino</em>
+		</label>
+		<br>
+
+		<label>
+			<input type="radio" name="genero" value="Otro">
+			<em>Otro</em>
+		</label>
+		<br>
+
+		<h4>Pasatiempos</h4>
+		<label>
+			<input type="checkbox" name="pasatiempos" value="Leer">
+			<em>Leer</em>
+		</label>
+		<br>
+
+		<label>
+			<input type="checkbox" name="pasatiempos" value="Caminar">
+			<em>Caminar</em>
+		</label>
+		<br>
+
+		<label>
+			<input type="checkbox" name="pasatiempos" value="Música">
+			<em>Escuchar música</em>
+		</label>
+		<br><br>
+
+		<label>CV:</label><br>
+		<textarea name="cv" cols="30" rows="10"></textarea>
+		<br><br>
+
+		<label>Subí tu foto:</label>
+		<input type="file" name="foto">	
+		<br><br>
+
+		<label>País de residencia:</label>
+		<select name="paisResidencia">
+			<option value="no definido">Elegí un país</option>
+			<option value="Argentina">Argentina</option>
+			<option value="Bolivia">Bolivia</option>
+			<option value="Brasil">Brasil</option>
+			<option value="Colombia">Colombia</option>
+			<option value="Chile">Chile</option>
+			<option value="Ecuador">Ecuador</option>
+			<option value="Paraguay">Paraguay</option>
+			<option value="Perú">Perú</option>
+			<option value="Uruguay">Uruguay</option>
+			<option value="Venezuela">Venezuela</option>
+		</select>
+
+		<br><br>
+		<button type="submit">Enviar</button>
+	</form>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Tipografías
+
+Lato
+Montserrat
+
+Colores
+
+Azul oscuro = #2C3E50
+Verde = #18BC9C
+Gris oscuro = #1a252f

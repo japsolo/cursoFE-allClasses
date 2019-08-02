@@ -1,0 +1,30 @@
+CSS
+Cascading Style Sheets
+Lenguaje de estilización
+Lenguaje para dar estilo
+
+Está compuesto de Reglas de Estilo
+
+Regla de estilo = conjunto de propiedades visuales con sus correspondientes valores
+
+Sintaxis de una regla de estilo
+
+selector {
+	propiedad1: valor;
+	propiedad2: valor;
+}
+
+selector = es la parte de la regla de estilo que define a qué elemento del HTML vamos a aplicar dicha regla.
+
+Propiedades para textos
+
+• font-family: Tahoma, Geneva, sans-serif;
+• font-size: 23px;
+• color: crimson;
+• font-weight: normal; [bold | <number>]
+• font-style: normal; [italic]
+--
+• text-align: left; [center | right | justify]
+• text-transform: none; [uppercase | lowercase | capitalize]
+• text-decoration: none; [underline | overline | line-through]
+• line-height: 14px; (interlineado)

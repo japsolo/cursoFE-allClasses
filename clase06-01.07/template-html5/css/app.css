@@ -1,0 +1,58 @@
+/* Selector Universal */
+* {
+	box-sizing: border-box; /* permite que el PADDING y BORDER se descuente del WIDTH y HEIGHT */
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	display: inline-block;
+}
+
+.main-title {
+	font-family: 'Arvo', serif;
+	text-align: center;
+	color: #f53d2b;
+	font-size: 34px;
+	text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
+	/* text-shadow: offset-x offset-y blur color; */
+}
+
+.subtitle {
+	color: #939393;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400; /* elegimos el estilo NORMAL de la tipografía */
+	margin-bottom: 40px;
+}
+
+hr {
+	border: none;
+	border-top: solid 1px #f00;
+	border-bottom: solid 1px #f00;
+	height: 12px;
+}
+
+.product-img {
+	width: 100%; /* la imagen se adapta al 100% de ancho de su contenedor */
+	border: solid 10px rgb(161, 240, 91);
+}
+
+/* pisamos el estilo para el btn-info que viene con bootstrap */
+.btn-info {
+	background-color: #f53d2b;
+	border: solid 1px #c43324;
+}
+
+.btn-info:hover {
+	background-color: #c43324;
+	border: solid 1px #c43324;
+}
+
+.banner {
+	background-image: url('../images/banner.jpg');
+	padding: 100px 0;
+	margin: 50px 0;
+}

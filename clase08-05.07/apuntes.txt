@@ -1,0 +1,146 @@
+== Operadores ==
+
+1. Matemáticos
+	• +
+	• -
+	• *
+	• /
+	• % (nos retorna el resto de una división)
+
+2. Asignación
+	• =
+
+3. Comparación
+	• > (mayor que)
+	• >= (mayor o igual que)
+	• < (menor que)
+	• <= (menor o igual que)
+	• == (igual que - solo valor - igualdad simple)
+		'2' == 2 // true
+	• === (igual que - valor y tipo de dato - igualdad estricta)
+		'2' == 2 // false
+	• != (distinto que - solo valor - desigualdad simple)
+		'2' != 2 // false
+	• !== (distinto que - valor y tipo de dato - desigualdad estricta)
+		'2' !== 2 // true
+
+4. Lógicos
+	• && (and ó y)
+		5 > 3 && 5 < 10 // true
+		true y true // true
+		15 <= 10 && 15 >= 12 && 15 != 34 // false
+		false y true y true // false
+		(15 == 15 && 15 != 25) && 15 > 34 // false
+		true y false // false
+
+	• || (or ó o)
+		5 > 20 || 5 < 10 // true
+		false o true // true
+		5 > 20 || (5 < 10 || 5 == 'a') // true
+		false o true // true
+
+	• ! (negación)
+		!true // false
+		!false // true
+
+== Valores Truthy y Falsy ==
+Son aquellos valores que NO son explicitamente un boolean pero que si van a evaluar como true o false.
+	* true
+	* false
+	• '' // falsy
+	• 0 // falsy
+	• null // falsy
+	• undefined // falsy
+	• NaN // falsy
+	• Cualquier otro valor // truthy
+
+== Condicionales ==
+Nos permiten preguntar por algún dato que evalue como true o false. Y en función de esa respuesta ejecutar un bloque de código u otro.
+
+Pseudo código (código en palabras humanas)
+
+si (llueve) {
+	llevo paraguas
+} si no {
+	no llevo paragüas
+}
+
+Sintaxis en JS
+
+var clima = 'lluvioso';
+
+if (clima === 'lluvioso') {
+	console.log('Recorda llevar paraguas');
+} else {
+	console.log('Hoy no llueve, tranca');
+}
+
+El else NO es obligatorio.
+
+if (clima === 'lluvioso') {
+	console.log('Recorda llevar paraguas');
+}
+
+Evaluando varias sentencias a la vez:
+
+if (5 > 3 && 4 < 2) {
+	console.log('ok');
+	// Nunca entra en el IF
+}
+
+Evaluando varios ESCENARIOS a la vez
+
+var diaSemana = 'martes';
+
+si (es lunes ó martes) {
+	mostrar en consola: Hay que laburar
+} o si (es sábado) {
+	mostrar en consola: Día de joda
+} o si (es domingo) {
+	mostrar en consola: Tranca con Netflix
+} si no {
+	mostrar en consola: No sé que hacer
+}
+
+if (diaSemana == 'lunes' || diaSemana == 'martes') {
+	console.log('Laburar');
+} else if (diaSemana == 'sábado') {
+	console.log('Fiesta');
+} else if (diaSemana == 'domingo') {
+	console.log('netflix');
+} else {
+	console.log('no sé que hacer');
+}
+
+=> Ejercicio 1
+
+a. Crear una variable numeroDeLaSuerte asignarle número cualquiera.
+b. Crear un condicional que pregunte sí:
+	- el numeroDeLaSuerte es múltiplo de 3 ó
+	- el numeroDeLaSuerte es múltiplo de 5 y
+	- el numeroDeLaSuerte es distinto de 15
+c. Si lo anterior se cumple mostrar en consola: 'El __ es un número de la suerte';
+d. Si NO se cumple lo anterior, mostrar en consola: 'El __ NO es un número de la suerte, lo sentimos'.
+
+
+== Funciones built-in ==
+
+Si necesitamos parsear un dato a un valor numérico podemos usar:
+
+	• parseInt(dato)
+	• Number(dato)
+
+- window.confirm() ó confirm()
+Se parece mucho a un prompt() pero tiene dos botones, ACEPTAR y CANCELAR. Si presionamos ACEPTAR, el confirm() retorna true, CANCELAR retorna false.
+
+=> Ejercicio 2
+
+a. Crear un index.html
+b. Crear un app.js
+c. Vincular los 2 archivos
+d. Preguntar al visitante que ingrese su nombre
+e. Preguntar al visitante que ingrese su edad
+f. Mostrar una ventana de confirmación diciendo: 'Tu nombre es ___ y tu edad es ___. ¿Estás de acuerdo?'.
+g. Si el visitante está de acuerdo, vamos a mostrar una alerta que salude al visitante ('Hola ___') y le diga bienvenido.
+	g.1. Opcional: Mostrar otra alerta que le diga al visitante, dentro de 7 años tendras ___
+h. Si el visitante NO está de acuerdo. Vamos a redirigir al visitante a la web de Instagram. (GOOGLEAR)

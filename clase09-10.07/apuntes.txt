@@ -1,0 +1,131 @@
+== If ternario ==
+Es un IF de una sola línea. No es necesario escribir la palabra if.
+
+condición ? caso true : caso false;
+
+console.log( 5 > 4 ? 'Si. El 5 es mayor' : 'No, el 5 no es mayor' );
+
+if (5 > 4) {
+	console.log('Si. El 5 es mayor');
+} else {
+ console.log('No, el 5 no es mayor');
+}
+
+
+== Loops ==
+Nos permiten hacer cosas de manera repetitiva.
+
+1. while
+Es un loop que va a ejecutar una porción de código siempre y cuando la condición sea TRUE.
+
+while (condición) {
+	// bloque de ejecución si se cumple la condición
+}
+
+Ej:
+// LOOP INFINITO - CUIDADO
+
+var numero = 1;
+
+while (numero < 5) {
+	console.log(numero);
+}
+
+// LOOP NO INFINITO
+var numero = 1;
+
+while (numero < 5) {
+	console.log(numero);
+	numero = numero + 1;
+}
+
+Iteración 1
+En consola : 1
+numero = 1 + 1 = 2
+
+Iteración 2
+En consola : 2
+numero = 2 + 1 = 3
+
+Iteración 3
+En consola : 3
+numero = 3 + 1 = 4
+
+Iteración 4
+En consola : 4
+numero = 4 + 1 = 5
+
+== Operadores mátematicos abreviados ==
+
+• Suma en línea
+	var num = 1;
+	num = num + 1;
+
+	num++; // Suma 1 a la variable
+	num = num + 5;
+
+	num += 5; // Suma 5 a la variable
+
+• Resta en línea
+	num = num - 5;
+	num -= 5;
+
+	num--; // resta después de la ejecución
+	--num; // resta antes de la ejecución
+
+• Multiplicación en línea
+	num = num * 5;
+	num *= 5;
+
+• División en línea
+	num = num / 5;
+	num /= 5;
+
+
+*** Ejercicio 1 ***
+1. Crear un index.html
+2. Crear un app.js
+3. Vincular los archivos
+4. Crear una variable que tenga el número 1
+5. Hacer un while loop, que muestre en consola los números múltiplos de tres que hay desde el 1 hasta el 100.
+
+
+== Funciones built-in ==
+
+Objeto Math
+Este objeto tiene varios métodos para operar matematicamente.
+
+	• Math.random()
+		Nos retorna un número random decimal entre 0 y 1.
+
+	• Math.round(x)
+		Nos retorna el entero de un número decimal.
+		Ej: 0.5 = 1
+		Ej: 0.3 = 0
+
+	. Math.ceil(x)
+		Nos retorna el entero de un decimal redondeado hacia arriba.
+		Ej 0.01 = 1;
+
+	• Math.floor(x)
+		Nos retorna el entero de un decimal redondeado hacia abajo.
+		Ej 0.9 = 0;
+
+	• Math.pow(x, y)
+		Nos retorna la potencia de X elevada a la Y
+		Ej: Math.pow(2, 3); // 8
+
+
+*** Ejercicio 2 ***
+1. Pedir al usuario que escriba un número entre 1 y 5
+2. Hacer este pedido mientras:
+	2a. El numero sea menor a 1 o mayor que 5 o
+	2b. Lo ingresado por el usuario no sea un número
+3. Si se cumplió lo solicitado en el punto 2:
+	3a. Generar un número aleatorio entre 1 y 5
+	3b. Verificar si dicho número random es igual al ingresado por el usuario.
+	3c. Si los números coinciden (random y del usuario). Mostrar en consola: "Adivinaste el número". Si no, mostrar en consola "No adivinaste :("
+
+do {
+
+} while()

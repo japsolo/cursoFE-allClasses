@@ -1,0 +1,130 @@
+Clase 01 - Javascript
+
+Javascript NO es Java.
+
+Javascript es un lenguaje de programación orientado a entornos web. Es un lenguaje interpretado por el navegador.
+
+El objetivo de JS es otorgar dinamismo a nuestro sitio web.
+
+Lo 1ero que podemos hacer con JS son operaciones matemáticas. En las operaciones matemáticas tenemos:
+
+	1. +
+	2. -
+	3. *
+	4. /
+	5. % (módulo ó resto de la división)
+
+Todo lenguaje de programación tiene algo que se conoce como la VARIABLES. ¿Qué es una variable? un lugar en donde podemos almacenar información.
+
+¿Cómo se crean variables en JS?
+
+Se usa la palabra reservada "var". Una variable siempre necesita que se le dé un nombre. Ej:
+
+var usuario;
+(Creamos una variable que se llama usuario)
+
+Para crear y asignarle un valor a una variable, hacemos así:
+
+var usuario = "Juanita";
+(Creamos una variable que se llama usuario y le asignamos el valor "Juanita")
+
+var edad = 18;
+var email = "juanita@gmail.com";
+var cursaFrontEnd = true;
+var bandasFavoritas = ["Nirvana", "Metallica"];
+
+Atenti: el nombre de una variable NO puede arrancar en un número.
+
+MAL: var 12usuario = "pepe";
+BIEN: var usuario12 = "ana";
+
+Un lenguaje de programación tiene TIPOS DE DATOS.
+
+	- number
+	- string ("" ó '')
+	- booleano
+	- array - mátriz - arreglo
+	- funciones
+	- objetos
+	• NaN
+	• null
+	• undefined
+
+El operador +, tiene 2 responsabilidades:
+
+	- sumar y
+	- concatenar (unir dos o más datos)
+
+¿?
+
+"5" + "5" = "55";
+"5" + 5 = "55";
+5 + "5" = "55";
+40 + 10 + "5" = 55;
+
+PARSEAR - HARCODEAR
+
+Cualquier tipo de operación distinta a la suma, si se da entre un number y un string va a dar como resultado un NaN (Not a Number).
+
+¿Cómo implementar JS en HTML?
+
+En HTML tenemos un tag que se llama <script></script>. Existen dos formas de asociar codigo JS a través del tag <script>:
+
+	1. Escribir todo el JS dentro del tag <script>
+
+	<script>
+		var user = "Juana";
+	</script>
+
+	2. Vincular un archivo con extensión *.js a través del atributo src=""
+
+	<script src="js/app.js"></script>
+
+¿Donde va el tag <script>?
+El tag va ANTES de cerrar el body (</body>). También puede ir en dentro del <head>.
+
+Ejercicio:
+
+	1. Crear un archivo index.html
+	2. Crear un archivo app.js
+	3. Vincular el HTML con el JS
+	4. Dentro del archivo JS escribir esto:
+		console.log("Estoy programando");
+	5. Abrir el HMTL en el navegador y ver en consola qué pasa.
+
+
+Funciones built-in
+
+Son funciones que existen con el lenguaje. Ya están creadas.
+
+console.log();
+console.error();
+console.warn();
+> Sirve para mostrar en la consola un dato. Con la DOT NOTATION estamos accediendo a un método (función) del objeto.
+
+alert() ó window.alert()
+> Genera una alerta que se carga recién ingreso a la página. Detiene la ejecución del resto del código.
+
+prompt() ó window.prompt()
+> Generar una alerta que se carga recién ingreso a la página. Detiene la ejecución del resto del código, pero esta alerta viene con un input de texto.
+
+Método => una función de un objeto.
+
+
+Ejercicio 2:
+
+	1. Pedir el nombre al visitante de la web, almacenar el dato en una variable.
+	2. Pedir el año de nacimiento al visitante, almacenar el dato en una variable.
+	3. Mostrar una alerta que diga: "Hola ___ tenés ___ años".
+
+
+Bonus track
+Para saber el tipo de dato de una variable podemos usar lo siguiente:
+
+	typeof variable;
+
+	Ejemplo:
+
+	var user = 'Ana';
+	typeof user;
+	'string';

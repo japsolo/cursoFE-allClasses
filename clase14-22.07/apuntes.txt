@@ -1,0 +1,38 @@
+== Eventos en JS ==
+Un evento es una interacción del usuario con el documento HTML. Hay varios tipos de eventos:
+
+	1. Del mouse
+		- clic
+		- hover
+		- movimiento
+	2. Del teclado
+		- presionar teclas
+	3. Del documento
+		- cuando se carga
+	4. De la ventana
+		- scroll
+
+Un evento SIEMPRE desencadena un comportamiento. Dicho comportamiento va a estar asignado a través de una función.
+
+== ¿Cómo se asigan eventos? ==
+Los eventos pueden ser asignados a cualquier objeto del DOM.
+
+Para asignar un evento, usamos un método que se llama addEventListener(String name, Fn callback), el cual recibe dos parámetros:
+
+	1. name = nombre del evento que queremos asignar
+			'click'
+			'mouseover'
+			'mouseout'
+			'mouseenter'
+			'mouseleave'
+	2. fn = la función que desencadena el comportamiento
+			function () {
+				alert('Hola qué tal');
+			}
+
+Dentro del callback que pasamos como 2do parámetro del método addEventListener, podemos pasar un parámetro a través del cual podemos capturar TODA la información del evento en si. ¿Cómo lo hacemos?:
+	function (event) {
+		console.log(event);
+	}
+
+En este caso 'event' es la información de evento en si. Es un objeto literal con key/value.

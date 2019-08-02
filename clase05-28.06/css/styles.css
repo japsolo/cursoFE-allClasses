@@ -1,0 +1,17 @@
+[class*=col-] {
+	/* border: solid 1px rgb(198, 195, 195); */
+}
+
+.container {
+	border: solid 1px red;
+}
+
+.btn-info {
+	background-color: rgb(227, 79, 16);
+	border-color: rgb(142, 47, 7);
+}
+
+.btn-info:hover {
+	background-color: rgb(142, 47, 7);
+  border-color: rgb(113, 37, 5);
+}

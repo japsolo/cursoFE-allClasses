@@ -1,0 +1,32 @@
+=== jQuery ===
+Es una librería (conjunto de funcionalidades que ya están hechas) de JavaScript. Nos da un montón de cosas que podemos usar y que relativamente son más "sencillas" que hacer lo mismo con JS Vanilla.
+
+Recomendación: trabajar siempre con la versión comprimida.
+RECOMENDACIÓN: nunca hacer cambios en el archivo de jQuery.
+
+Es necesario vincular la librería con nuestros archivos HTML. Y debe ir ANTES que nuestro propio código JS.
+
+En jQuery el $ es muy importante, pues a través de dicho símbolo vamos a poder apuntar a los elementos existentes en el DOM. Podríamos decir el el $, es el querySelector().
+
+== Métodos de jQuery ==
+
+1) .css()
+Nos Permite aplicar CSS a un objeto. Lo podemos hacer de dos maneras:
+	elemento.css('font-size', '13px');
+
+	elemento.css({
+		fontSize, '13px',
+		color, 'red',
+	});
+
+2) .text()
+Éste método es de lectura y escritura. Si no le pasamos parámetros, no retorna el contenido de texto del objeto.
+
+3) .html()
+Éste método es de lectura y escritura. Si no le pasamos parámetros, no retorna el contenido HTML del objeto.
+
+4) slideUp(), slideDown(), slideToggle()
+Éste método nos permite ocultar, mostrar o alternar estos comportamientos sobre un objeto determinado. Recibe como parámetro: 'slow' ó 'medium' ó 'fast' ó milisegundos.
+
+5) fadeUp(), fadeDown(), fadeToggle()
+Éste método nos permite ocultar, mostrar o alternar estos comportamientos sobre un objeto determinado. Recibe como parámetro: 'slow' ó 'medium' ó 'fast' ó milisegundos.

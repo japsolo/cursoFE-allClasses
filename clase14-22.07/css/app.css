@@ -1,0 +1,16 @@
+body {
+	font-family: sans-serif;
+	background-color: rgb(221, 221, 221);
+}
+
+button {
+	background-color: rgb(92, 153, 203);
+	border: solid 1px rgb(66, 110, 145);
+	border-radius: 6px;
+	color: #ffffff;
+	padding: 5px 8px;
+}
+
+.hidden {
+	display: none;
+}

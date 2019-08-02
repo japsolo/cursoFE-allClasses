@@ -1,0 +1,83 @@
+== Arreglos / Arrays / Matrices ==
+Tipo de dato que sirve para agrupar otros datos, nos genera un listado de cosas. Los array se ven así:
+
+var estudiantes = ['Maria', 'Lucila', 'Martu', 'Cande', 'Pablo', 'Shaggy', 'Johathan', 'Santino', 'Milo', 'Eze', 'Ale'];
+
+var otroListado = ['Curso FrontEnd', true, null, undefined, ['hola', 'chao']];
+
+Todo array tiene algo que llamamos ÍNDICE. La posición en la que se encuentra un elemento dentro del array. Los array siempre comienzan con el índice en 0.
+
+Todo array tiene algo que llamamos la CANTIDAD DE ELEMENTOS. Siempre se comienza a contar desde 1.
+
+Podemos decir, que un array tiene en sus ÍNDICES la misma cantidad de ELEMENTOS menos 1.
+
+Una manera de saber cuántos elementos tiene un array es, ejecutando sobre él el método length.
+
+Cuando queremoc acceder a un elemento / dato específico dentro de un array, tenemos que hacerlo así:
+
+nombreArray[indice]
+
+var estudiantes = ['Maria', 'Lucila', 'Martu', 'Cande', 'Pablo', 'Shaggy', 'Johathan', 'Santino', 'Milo', 'Eze', 'Ale'];
+
+console.log( estudiantes[3] );
+
+== Iterando un Array ==
+
+a. for loop (NO es exclusivo para arrays)
+El for sirve para recorrer arrays y para hacer varias cositas más, se escribe así:
+
+for (var i = 0; i < 3; i++) {
+	// El bloque de código a ejecutar
+	console.log('Hola');
+}
+
+var i = 0; // Variable índice
+i < 10; // Condición a cumplir
+i++ // Incremento de la variable índice
+
+Hola
+Hola
+Hola
+
+b. forEach loop (SI es exclusivo para arrays)
+El forEach sirve para iterar exclusivamente sobre arrays. Se escribe así:
+
+nombreArray.forEach(function (elemento) {
+	// El bloque de código a ejecutar
+});
+
+
+== Ejercicio ==
+Hacer un script que pida al visitante una cantidad de personas a registrar. Dependiendo de la cantidad mostrar mísmo número de prompts para registar nombre de personas. Al final mostrar en consola un array con todos los nombres de las personas registradas.
+
+
+== Método de Arrys ==
+
+a. .indexOf()
+Se ejecuta sobre un array y nos permite preguntar en qué índice se encuentra un elemento. Este método nos retorna el índice en el que se encuentra dicho elemento o -1 si no existe tal elemento dentro del array.
+
+var estudiantes = ['Ana', 'Maria', 'Pablo', 'Dario', 'Sonia', 'Denise'];
+
+estudiantes.indexOf('Maria'); // 1
+estudiantes.indexOf('Pablo'); // 2
+estudiantes.indexOf('Sara'); // -1
+
+b. .slice(desde, hasta)
+Dado un array, dicho método tomará una porción de ese array y nos lo retorna. No modifica el array original
+
+var losUltimos = estudiantes.slice(2, 4); // ['Pablo', 'Dario']
+
+c. splice(desde, cuantos)
+Dado un array este método nos permite extraer un cantidad determinada de elementos de ese array. Si no pasamos el 2do parámetro, se removerando todos los demas elementos a partir del indicado en el 1er parámetro. Importante. Éste método MODIFICA el array original.
+
+var removidos = estudiantes.splice(3, 1);
+
+d. .join()
+Dado un array, unifica en un string a todos los elementos de dicho array. Si le pasamos un parámetro (string), dicho string será el elemento concatenador.
+
+estudiantes.join('-'); // 'Ana-Maria-Pablo-Dario-Sonia-Denise'
+
+e. .split()
+Dado un string, convierte el mismo en un array. Recibe como parámetro el tipo de separador. Si le damos como parámetro un string vacío. Toma cada caracter del string y lo asigna a un índice dentro del array.
+
+'hola mundo'.split(''); // ["h", "o", "l", "a", " ", "m", "u", "n", "d", "o"]

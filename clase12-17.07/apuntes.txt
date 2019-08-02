@@ -1,0 +1,73 @@
+== Objetos Literales ==
+Un objeto literal es un tipo de dato dentro de Javascript. Un objeto se diferencia del un array pues ahora éste tipo una conjunción de key / value.
+
+Los objetos, se inician con { } y adentro de las mismas vamos a poner, key y value. Podemos tener dentro de un mismo objeto, muchos key / value. Para lograr esto vamos a separar los mismo por una coma ','.
+
+var estudianteJuana = ['Juana', 'Saenz', 34560344, 1145343231];
+var estudianteMario = ['Perez', 'Mario', 1534223311, 54678904];
+
+Un objeto se ve así:
+
+var estudianteJuana = {
+	nombre: 'Juana',
+	apellido: 'Saenz',
+	dni: 34560344,
+	numeroCelular: 1145343231,
+}
+
+var estudianteMario = {
+	apellido: 'Pérez',
+	nombre: 'Mario',
+	numeroCelular: 1534223311,
+	dni: 54678904,
+}
+
+Para acceder a los valores de las claves dentro de un objeto, lo podemos hacer usando la DOT NOTATION:
+
+estudianteJuana.nombre; // 'Juana'
+estudianteJuana.dni; // 34560344
+
+Los objetos, pueden recibir nuevas claves / propiedades después de haber sido creados.
+
+estudianteJuana.curso = 'Frontend';
+
+¡WARNING! hacer lo anterior con una propiedad / clave existente, pisa el valor actual por el nuevo valor.
+
+Si quisieramos eliminar una clave dentro de un objeto, lo hacemos con el operador delete, así:
+
+delete estudianteJuana.numeroCelular; //
+
+===
+
+var computadora = {
+	marca: 'Dell',
+	modelo: 2018,
+	pantalla: 13,
+	discoDuro: {
+		tipo: 'SSD',
+		capacidad: 512,
+		fabricante: 'Intel',
+	},
+	colores: ['Negro', 'Verde', 'Azul'],
+	enceder: function () {
+		return 'Estoy encendida!!!';
+	}
+}
+
+
+== Ejercicio ==
+Crear un objeto con los siguiente datos:
+
+	- nombre
+	- apellido
+	- curso
+	- saludar() / método
+
+El método debe retornar un string así: 'Hola, soy Pedro Pérez y estoy cursando Frontend'.
+
+
+Para iterar un objeto podemos usar el for in
+
+for (var key in objeto) {
+	console.log(objeto[key]);
+}

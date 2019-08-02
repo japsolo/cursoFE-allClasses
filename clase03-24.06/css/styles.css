@@ -1,0 +1,51 @@
+.producto {
+	background-color: rgb(202, 215, 150);
+	width: 300px;
+	border: 5px black double; /* [solid | dashed | dotted | double ] */
+	border-radius: 20px;
+}
+
+.red-text {
+	background-color: yellow;
+	color: red;
+}
+
+/* Selector Descendente */
+.producto h2 {
+	color: red;
+	text-align: center;
+}
+
+.body-register {
+	background-color: rgb(158, 156, 159);
+}
+
+.area-texto {
+	width: 450px;
+	height: 120px;
+}
+
+/* ejemplo de selector Descendente */
+
+.parrafo-destacado {
+	color: green;
+}
+
+.parrafo-destacado span {
+	background-color: yellow;
+	font-weight: bold;
+}
+
+.bg-red {
+	background-color: red;
+}
+
+#titular1 {
+	text-align: center;
+	font-size: 80px;
+}
+
+#titular2 {
+	text-align: center;
+	font-size: 80px;
+}

@@ -1,0 +1,108 @@
+== Funciones ==
+Son bloques de código reutilizables.
+
+Toda función está dividida en 2 partes:
+
+	1. Definición de la función (crearla con su lógica)
+	2. Ejecución de la función (usarla cuando la necesitamos)
+
+
+1. Definiendo la función (creando la función)
+
+-> Función anónima - expresión de una función
+
+	var sayHello = function () {
+		var nombre = prompt('¿Cómo te llamás?');
+		alert('Hola ' + nombre);
+	}
+
+-> Función declarada - definición de una función
+
+	function sayHello () {
+		var nombre = prompt('¿Cómo te llamás?');
+		alert('Hola ' + nombre);
+	}
+
+2. Ejecutando la función (llamando a la función)
+
+sayHello();
+
+
+-> Parámetros de una función
+Parámetros o argumentos, son aquellos datos que podemos darle a una función, para que la función tome éstos y los use según su necesidad.
+
+Los parámetros de una función siempre se declaran adentro de los paréntesis.
+
+function sayHello (nombre, apellido) {
+	var variableInterna = 'Adentro de la función';
+	alert('Hola ' + nombre + ' ' + apellido);
+}
+
+sayHello('Pepe', 'Grillo');
+
+Los parámetros de una función son VARIABLES locales de la función, es decir, dichas variables SOLO son conocidas dentro de la función.
+
+
+-> SCOPE (alcance)
+	• Global (todos aquellos datos que están fuera de las fn)
+	• Local (todos aquellos datos que están DENTRO de las fn)
+
+
+-> ¡Importante!
+La mayoría de las funciones deberían retornar algo. Es aquí donde vamos a hacer uso de la palabra reservada return.
+
+¿Qué es el return?
+Es lo que usa cualquier función para RETORNAR algo. Una vez, dentro de la función se encuentre un return, se cortará la ejecución del cuerpo de la función.
+
+-> Parámetros con valor default
+
+Particularidad que nos permite asignar un VALOR un parámetro
+
+function sumar (n1, n2 = 5) {
+	// Si no me dan en n2, el valor del mismo será 5
+	return n1 + n2;
+}
+
+sumar(3); // 8
+sumar(3, 27); // 30
+
+** EJERCICIO 1 **
+Desarrollar un script que tenga una función llama tarjetaDePresentacion, la cual tomará 3 parámetros:
+	1. título -> ej: 'Sra' || 'Sr.' || 'Dra.'
+	2. nombre
+	3. Apellido
+Dicha función retornará un string así: "Dra. Clara López".
+
+Si No el pasa un apellido. La tarjeta de presentación quedará así: 'Dr. Juan Sin Apellido'.
+
+Para esto:
+
+	1. Pedir al visitante el título
+	2. Pedir al visitante el nombre
+	3. Pedir al visitante el apellido
+	4. Pedir confirmación que los datos sean correctos
+
+Finalmente mostrar una alerta con el resultado de la tarjetaDePresentacion.
+
+
+** EJERCICIO 2 **
+Define una función llamada longitudNombreCompleto(), que dado un nombre y un apellido, y devuelva su longitud total, contando un espacio extra para separar a ambos.
+
+Ejemplos de resultado esperado:
+
+longitudNombreCompleto("Arya", "Stark") // 10 - Hay 9 letras y sumamos 1 más por el espacio adicional
+
+Consultarle a Google:
+¿cómo podemos contar la cantidad de letras de un string?
+
+
+** EJERCICIO 3 **
+Define la función llamada puedoIrAlBanco() la cual, recibiendo dos parámetros, el primero: diaDeLaSemana (string) y el segundo horaActual (number), retorne true, solamente cuando es posible ir al banco y encontrarlo abierto.
+
+IMPORTANTE: tenemos que saber que un banco está cerrado cuando es fin de semana (sábado y domingo) y cuando siendo día entre semana, no estamos dentro del horario bancario (9 a 15).
+
+Ejemplos de resultado esperado:
+
+puedoIrAlBanco("lunes", 10); // true, es día entre semana y está en horario bancario
+puedoIrAlBanco("martes", 18); // false, es día entre semana y NO está en horario bancario
+puedoIrAlBanco("sábado", 11); // false, es fin de semana

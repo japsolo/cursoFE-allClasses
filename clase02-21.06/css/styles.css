@@ -1,0 +1,39 @@
+/* Esto es un comentario */
+
+/* Selectores de clase */
+.special-link {
+	background-color: rgb(126, 231, 37);
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.bg-violet {
+	background-color: rgb(231, 37, 194);
+}
+
+/* Selectores de etiquetas */
+body {
+	background-color: rgb(241, 232, 148);
+	font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+	font-weight: 300; /* para usar el estilo "ligth" de la tipografía de Google llamada Raleway */
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: underline; /* mala práctica */
+}
+
+p {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	font-style: italic;
+}
+
+a {
+	text-decoration: line-through;
+	color: red;
+}
